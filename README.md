@@ -1,94 +1,48 @@
-# Querkles-page
+# Querkles Mini
 
-# Querkles Style Image Processor
-
-A comprehensive web project that transforms uploaded images into **Querkles style** art — a unique composition of overlapping colorful circles with adjustable settings and export options.
+**Querkles Mini** is a web-based creative tool that transforms any uploaded image into a *Querkles*-style coloring artwork. The effect uses overlapping numbered circles, where each number corresponds to a color in a chosen palette. Once colored in, the overlapping circles reveal a complete image — like pixel art, but made of circles.
 
 ---
 
-## Main Features
+## ✨ Features
 
-1. **Querkles Style Rendering**  
-   Generates a digital artwork made of colorful, overlapping circles inspired by the Querkles art style.
+- **Upload Any Image** (JPG/PNG)  
+  Choose any photo and turn it into a circle-based Querkles artwork.
 
-2. **Before and After Previews**  
-   - Left side: Original uploaded image.  
-   - Right side: Querkles-processed image preview.
+- **Subject-Only Mode with Background Removal**  
+  Uses AI-powered segmentation to isolate the subject (person) and apply the effect only on them, removing or dimming the background.
 
-3. **Color Palette Selection**  
-   Allows users to choose from different color palettes for the Querkles circles.
+- **Before & After Previews**  
+  Compare the original image with the generated Querkles version side-by-side.
 
-4. **Paper Size Selection**  
-   Supports common print sizes from A6 up to A3 to match printing requirements.
+- **Custom Color Palette**  
+  Select **exactly 5 colors** for the numbered sections or use a random preset.
 
-5. **SVG and PDF Export**  
-   Export the Querkles artwork as scalable SVG or high-quality PDF files.
+- **Print-Ready Sizes**  
+  Supports common paper sizes from **A6 up to A3** (Portrait or Landscape).
 
-6. **Print-ready DPI Settings**  
-   Adjust the DPI (dots per inch) for print-quality outputs.
+- **Adjustable Output Quality**  
+  Set **DPI** for high-quality printing and tweak grid density, circle spread, stroke width, and numbers visibility.
 
-7. **Black-and-White Circle Outlines (Classic Querkles)**  
-   Option to render the artwork using only black and white circle outlines for a classic look.
+- **Two Rendering Modes**  
+  - *Coloring Page*: outlines + numbers for manual coloring.
+  - *Filled Mode*: fully colored circles.
 
----
-
-## Project Structure
-
-- `index.html` — The main interface with upload, preview panels, and controls.  
-- `app.css` — Styles for layout, buttons, and canvas elements.  
-- `app.js` — Logic for image processing, Querkles rendering, user controls, and export functionality.
+- **Export Options**  
+  Save as **scalable SVG** or **high-resolution PDF** for professional printing.
 
 ---
 
-## How to Use
+## 🖼 Example
 
-1. Open `index.html` in a modern web browser.  
-2. Upload your image (displayed on the left).  
-3. See the Querkles style transformation on the right.  
-4. Choose your preferred color palette.  
-5. Select paper size (A6 to A3).  
-6. Set DPI for printing quality.  
-7. Optionally switch to black-and-white outline mode.  
-8. Export your artwork as SVG or PDF for printing or sharing.
+**Before** | **After**
+:---:|:---:
+![Before Image](examples/before.jpg) | ![After Image](examples/after.jpg)
+
+> Replace the above image links with your own examples.  
+> Recommended size: around **800×600px** for clear display.
 
 ---
 
-## Customization
-
-- Modify the number and size of circles in `app.js` for different effects.  
-- Add or change color palettes inside `app.js`.  
-- Extend export options or paper sizes as needed.  
-
----
-
-## Future Enhancements
-
-- Interactive editing of individual circles.  
-- Animated Querkles effects.  
-- Support for other file formats.  
-
----
-
-## License
-
-MIT License
-
-Permission is hereby granted, free of charge, to any person obtaining a copy  
-of this software and associated documentation files (the "Software"), to deal  
-in the Software without restriction, including without limitation the rights  
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell  
-copies of the Software, and to permit persons to whom the Software is  
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all  
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR  
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,  
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE  
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER  
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,  
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE  
-SOFTWARE.
-
+## 📂 Project Structure
 

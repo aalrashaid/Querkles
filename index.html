@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Querkles Circles – Print Ready</title>
+    <link rel="stylesheet" href="app.css" />
+    <meta name="theme-color" content="#0b1020" />
+</head>
+
+<body>
+    <header class="top" role="banner">
+        <div class="brand">
+            <h1>Querkles Circles</h1>
+            <p class="sub">Numbered circles or classic rings • No mask • PNG / SVG / PDF</p>
+        </div>
+    </header>
+
+    <main class="layout" role="main">
+        <!-- Settings Panel -->
+        <aside class="panel">
+            <h2>Settings</h2>
+
+            <!-- Upload -->
+            <div class="field">
+                <label class="btn">
+                    <input id="file" type="file" accept="image/*" hidden />
+                    Upload Image
+                </label>
+            </div>
+
+            <!-- Palette -->
+            <div class="field">
+                <label>Palette (1 → 5)</label>
+                <div class="palette">
+                    <input type="color" id="c1" value="#ffffff" />
+                    <input type="color" id="c2" value="#d9d9d9" />
+                    <input type="color" id="c3" value="#a6a6a6" />
+                    <input type="color" id="c4" value="#5c5c5c" />
+                    <input type="color" id="c5" value="#1a1a1a" />
+                </div>
+                <small class="muted">تدرّج رمادي للطباعة؛ غيّر الألوان إذا ودّك.</small>
+            </div>
+
+            <!-- File name -->
+            <div class="field">
+                <label for="exportName">File name (no extension)</label>
+                <input id="exportName" type="text" value="querkles-art" />
+            </div>
+
+            <!-- Mode toggle -->
+            <div class="field">
+                <label class="switch">
+                    <input type="checkbox" id="modeClassic" />
+                    <span>Classic Rings mode</span>
+                </label>
+                <small class="muted">مقفول = دوائر مرقّمة • مفتوح = حلقات شفافة</small>
+            </div>
+
+            <!-- Actions -->
+            <div class="field buttons">
+                <button id="btnProcess" class="btn">Convert</button>
+                <button id="btnSaveSettings" class="btn save">Save Settings</button>
+            </div>
+
+            <!-- Print & Export -->
+            <hr class="sep" />
+            <h3>Print & Export</h3>
+
+            <div class="field grid">
+                <div>
+                    <label for="paperSize">Paper size</label>
+                    <select id="paperSize">
+                        <option value="A6">A6</option>
+                        <option value="A5">A5</option>
+                        <option value="A4" selected>A4</option>
+                        <option value="A3">A3</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="orientation">Orientation</label>
+                    <select id="orientation">
+                        <option value="portrait" selected>Portrait</option>
+                        <option value="landscape">Landscape</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="field grid">
+                <div>
+                    <label for="dpi">DPI (150–600)</label>
+                    <input id="dpi" type="number" min="150" max="600" step="50" value="300" />
+                    <small class="muted">للطباعة الاحترافية: 300 DPI.</small>
+                </div>
+                <div>
+                    <label for="exportFormat">Export as</label>
+                    <select id="exportFormat">
+                        <option value="png" selected>PNG</option>
+                        <option value="svg">SVG (vector)</option>
+                        <option value="pdf">PDF</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="field">
+                <button id="btnExport" class="btn">Export</button>
+                <small class="muted">SVG/PDF فيكتور أوضح للطباعة.</small>
+            </div>
+        </aside>
+
+        <!-- Canvas Stage -->
+        <section class="stage">
+            <canvas id="src" class="hidden" aria-hidden="true"></canvas>
+            <canvas id="out" aria-label="Result canvas"></canvas>
+        </section>
+    </main>
+
+    <footer class="foot" role="contentinfo">
+        <small>Client-side only • No uploads to server • v1.4</small>
+    </footer>
+
+    <script src="app.js" defer></script>
+</body>
+
+</html>
